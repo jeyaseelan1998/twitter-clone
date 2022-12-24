@@ -12,9 +12,12 @@ export const iconProvider = (size, color) => ({
   Bell_outline: <MaterialIcon name="bell-outline" size={size} color={color} />,
   Envelope: <FontAwesome name="envelope" size={size} color={color} />,
   Envelope_outline: <FontAwesome name="envelope-o" size={size} color={color} />,
-  Twitter: <FontAwesome name="twitter" size={size} color={color} />,
-  ToggleOn: <FontAwesome name="toggle-on" size={size} color={color} />,
-  ToggleOff: <FontAwesome name="toggle-off" size={size} color={color} />,
-  Light: <Ionicon name="sunny-outline" size={size} color={color} />,
-  Night: <Ionicon name="moon" size={size} color={color} />,
+  twitter: <FontAwesome name="twitter" size={size} color={color} />,
+  toggleOn: <FontAwesome name="toggle-on" size={size} color={color} />,
+  toggleOff: <FontAwesome name="toggle-off" size={size} color={color} />,
+  light: <Ionicon name="sunny-outline" size={size} color={color} />,
+  night: <Ionicon name="moon" size={size} color={color} />,
+  star: (
+    <MaterialIcon name="star-four-points-outline" size={size} color={color} />
+  ),
 });

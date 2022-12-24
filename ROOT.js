@@ -4,8 +4,10 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import {COLORS} from './src/constants/colors';
 import {iconProvider} from './src/constants/icons';
-import HomeScreen from './src/screens/HomeScreen';
 import {SIZES} from './src/constants/sizes';
+
+import HomeScreen from './src/screens/HomeScreen';
+import ProfilePicture from './src/components/ProfilePicture';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,12 +19,33 @@ const screenOptions = ({route}) => ({
   },
   tabBarActiveTintColor: COLORS.blue,
   tabBarInactiveTintColor: COLORS.gray500,
+  headerTitleAlign: 'center',
 });
+
+const headerTitle = () => {
+  let Icon = iconProvider(SIZES.xxl, COLORS.blue);
+  return Icon.twitter;
+};
+
+const headerRight = () => {
+  const Icon = iconProvider(SIZES.xxl, COLORS.blue).star;
+  return Icon;
+};
 
 const ROOT = () => {
   return (
     <Tab.Navigator screenOptions={screenOptions}>
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={({route}) => ({
+          headerTitle: headerTitle,
+          headerLeft: () => <ProfilePicture size={40} />,
+          headerLeftContainerStyle: {marginLeft: SIZES.lg},
+          headerRight: headerRight,
+          headerRightContainerStyle: {marginRight: SIZES.lg},
+        })}
+      />
       <Tab.Screen name="Search" component={Temp} />
       <Tab.Screen name="Bell" component={Temp} />
       <Tab.Screen name="Envelope" component={Temp} />

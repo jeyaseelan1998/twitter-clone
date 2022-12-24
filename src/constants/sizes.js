@@ -3,6 +3,6 @@ export const SIZES = {
   md: 8,
   lg: 16,
   xl: 24,
-  xxl: 48,
-  xxxl: 80,
+  xxl: 32,
+  xxxl: 48,
 };
