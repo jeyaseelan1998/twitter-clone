@@ -1,10 +1,10 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {SIZES} from '../constants/sizes';
 
 const url = 'https://pixlr.com/images/index/remove-bg.webp';
 
-const ProfilePicture = ({imgUrl = url, size}) => {
+const ProfilePicture = ({imgUrl = url, size, style}) => {
   const image = {
     height: size || SIZES.xl,
     width: size || SIZES.xl,
@@ -15,7 +15,7 @@ const ProfilePicture = ({imgUrl = url, size}) => {
         uri: imgUrl,
       }}
       resizeMode="contain"
-      style={[styles.image, image]}
+      style={[styles.image, image, style]}
     />
   );
 };

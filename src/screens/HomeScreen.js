@@ -1,8 +1,12 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
 
 import {SIZES} from '../constants/sizes';
 import {COLORS} from '../constants/colors';
+
+import Tweet from '../components/Tweet';
+
+import {tweets} from '../constants/mockTweet';
 
 const HomeScreen = () => {
   const styles = {
@@ -15,11 +19,9 @@ const HomeScreen = () => {
   };
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>HomeScreen</Text>
+      <Tweet tweet={tweets[0]} />
     </View>
   );
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({});

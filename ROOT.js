@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import {COLORS} from './src/constants/colors';
@@ -40,8 +40,10 @@ const ROOT = () => {
         component={HomeScreen}
         options={({route}) => ({
           headerTitle: headerTitle,
-          headerLeft: () => <ProfilePicture size={40} />,
-          headerLeftContainerStyle: {marginLeft: SIZES.lg},
+          headerLeft: () => (
+            <ProfilePicture size={40} style={styles.profilePicture} />
+          ),
+          // headerLeftContainerStyle: {marginLeft: SIZES.lg},
           headerRight: headerRight,
           headerRightContainerStyle: {marginRight: SIZES.lg},
         })}
@@ -71,3 +73,9 @@ const Temp = ({route}) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  profilePicture: {
+    marginLeft: SIZES.lg,
+  },
+});
