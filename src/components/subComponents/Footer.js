@@ -1,5 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+
 import {iconProvider} from '../../constants/icons';
 import {COLORS} from '../../constants/colors';
 import {SIZES} from '../../constants/sizes';

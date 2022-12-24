@@ -1,5 +1,6 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import moment from 'moment/moment';
 
 import {SIZES} from '../../constants/sizes';
 import {COLORS} from '../../constants/colors';
@@ -12,7 +13,9 @@ const RightContainer = ({tweet}) => {
       <View style={styles.tweetHeader}>
         <Text style={styles.name}>{tweet.user.name}</Text>
         <Text style={styles.username}>@{tweet.user.username}</Text>
-        <Text style={styles.createdAt}>50s</Text>
+        <Text style={styles.createdAt}>
+          {moment(tweet.createdAt).fromNow()}
+        </Text>
         <View style={styles.icon}>
           {iconProvider(SIZES.lg, COLORS.gray500).down}
         </View>
