@@ -5,6 +5,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 export const iconProvider = (size, color) => ({
   Home: <Ionicon name="home" size={size} color={color} />,
@@ -29,4 +30,7 @@ export const iconProvider = (size, color) => ({
   share: <EvilIcons name="share-google" size={size} color={color} />,
   like_outline: <AntDesign name="hearto" size={size} color={color} />,
   like: <AntDesign name="heart" size={size} color={color} />,
+  feather: <MaterialIcon name="feather" size={size} color={color} />,
+  plus: <Entypo name="plus" size={size} color={color} />,
+  close: <AntDesign name="close" size={size} color={color} />,
 });

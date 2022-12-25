@@ -22,7 +22,7 @@ export default Tweet;
 
 const styles = StyleSheet.create({
   container: {
-    padding: SIZES.md,
+    padding: SIZES[2],
     borderBottomWidth: 1,
     borderBottomColor: COLORS.gray300,
   },

@@ -5,7 +5,9 @@ import moment from 'moment/moment';
 import {SIZES} from '../../constants/sizes';
 import {COLORS} from '../../constants/colors';
 import {iconProvider} from '../../constants/icons';
+
 import Footer from './Footer';
+import Button from '../UI/Button';
 
 const RightContainer = ({tweet}) => {
   return (
@@ -16,9 +18,9 @@ const RightContainer = ({tweet}) => {
         <Text style={styles.createdAt}>
           {moment(tweet.createdAt).fromNow()}
         </Text>
-        <View style={styles.icon}>
-          {iconProvider(SIZES.lg, COLORS.gray500).down}
-        </View>
+        <Button style={styles.button}>
+          {iconProvider(SIZES[4], COLORS.gray500).down}
+        </Button>
       </View>
       <View style={styles.tweetBody}>
         <Text style={styles.tweetcontent}>{tweet.content}</Text>
@@ -36,7 +38,7 @@ export default RightContainer;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: SIZES.md,
+    marginHorizontal: SIZES[2],
   },
   tweetHeader: {
     flexDirection: 'row',
@@ -55,23 +57,23 @@ const styles = StyleSheet.create({
     marginRight: 5,
     color: COLORS.gray300,
   },
-  icon: {
+  button: {
     flex: 1,
     alignItems: 'flex-end',
   },
   tweetBody: {
-    marginTop: SIZES.sm,
+    marginTop: SIZES[1],
   },
   tweetcontent: {
     lineHeight: 19,
     color: COLORS.black,
   },
   image: {
-    height: 200,
+    height: SIZES.xl,
     width: '100%',
-    borderRadius: SIZES.lg,
+    borderRadius: SIZES[4],
     overflow: 'hidden',
-    marginVertical: SIZES.sm,
+    marginVertical: SIZES[1],
     resizeMode: 'contain',
   },
 });

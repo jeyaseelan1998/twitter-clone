@@ -8,7 +8,7 @@ import ProfilePicture from '../ProfilePicture';
 const LeftContainer = ({user}) => {
   return (
     <View style={styles.container}>
-      <ProfilePicture imgUrl={user.image} size={SIZES.xxxl} />
+      <ProfilePicture imgUrl={user.image} size={SIZES[12]} />
     </View>
   );
 };
@@ -16,7 +16,5 @@ const LeftContainer = ({user}) => {
 export default LeftContainer;
 
 const styles = StyleSheet.create({
-  container: {
-    // marginRight: SIZES.md,
-  },
+  container: {},
 });

@@ -1,27 +1,31 @@
-import {View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
-
-import {SIZES} from '../constants/sizes';
-import {COLORS} from '../constants/colors';
-
-import Tweet from '../components/Tweet';
 
 import {tweets} from '../constants/mockTweet';
 
+import Feed from '../components/Feed';
+import NewTweetButton from '../components/UI/NewTweetButton';
+import {SIZES} from '../constants/sizes';
+
 const HomeScreen = () => {
-  const styles = {
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    text: {fontSize: SIZES.xl, color: COLORS.black},
-  };
   return (
     <View style={styles.container}>
-      <Tweet tweet={tweets[0]} />
+      <Feed data={tweets} />
+      <NewTweetButton style={styles.newTweetBtn} />
     </View>
   );
 };
 
 export default HomeScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  newTweetBtn: {
+    bottom: SIZES[4],
+    right: SIZES[4],
+  },
+});
