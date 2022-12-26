@@ -1,5 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+import {withAuthenticator} from 'aws-amplify-react-native';
+
 import ROOT from './ROOT';
 
 const App = () => {
@@ -10,4 +12,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);

@@ -33,4 +33,6 @@ export const iconProvider = (size, color) => ({
   feather: <MaterialIcon name="feather" size={size} color={color} />,
   plus: <Entypo name="plus" size={size} color={color} />,
   close: <AntDesign name="close" size={size} color={color} />,
+  Logout: <AntDesign name="logout" size={size} color={color} />,
+  Logout_outline: <AntDesign name="logout" size={size} color={color} />,
 });
